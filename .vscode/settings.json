@@ -1,0 +1,17 @@
+{
+   "hediet.vscode-drawio.codeLinkActivated": true,
+   "diffEditor.codeLens": true,
+   "workbench.editor.autoLockGroups": {
+      "hediet.vscode-drawio-text": true
+   },
+   "workbench.editor.closeOnFileDelete": true,
+   "workbench.editor.enablePreviewFromCodeNavigation": true,
+   "workbench.editor.pinnedTabsOnSeparateRow": true,
+   "workbench.editor.preferHistoryBasedLanguageDetection": true,
+   "window.autoDetectColorScheme": true,
+   "workbench.preferredDarkColorTheme": "Default Dark+",
+   "workbench.preferredHighContrastColorTheme": "Default Dark+",
+   "workbench.preferredHighContrastLightColorTheme": "Default Dark+",
+   "workbench.preferredLightColorTheme": "Default Dark+",
+   "window.closeWhenEmpty": false
+}
