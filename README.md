@@ -15,9 +15,9 @@
 
 ### Association
 
--has_many :item_comments
--has_many :items_purchases
--has_many :items_lists
+- has_many :item_comments
+- has_many :items_purchases
+- has_many :items_lists
 
 ## shipping_addressesテーブル
 
@@ -32,8 +32,8 @@
 | items_purchase        | references | null: false, foreign_key: true |
 
 ## Association
--belongs_to :user
--has_one:item_list
+- belongs_to :user
+- has_one:item_list
 
 ## item_comments テーブル
 
@@ -45,8 +45,8 @@
 
 ### Association
 
--belongs_to :user
--belongs_to :item_list
+- belongs_to :user
+- belongs_to :item_list
 
 ## items_lists テーブル
 
@@ -64,9 +64,9 @@
 
 ### Association
 
--belongs_to :user
--has_many :item_comments
--has_one::items_purchase
+- belongs_to :user
+- has_many :item_comments
+- has_one:items_purchase
 
 ## items_purchases テーブル
 
@@ -77,6 +77,6 @@
 
 ### Association
 
--belongs_to :user
--has_one :shipping_address
--belongs_to :items_list
+- belongs_to :user
+- has_one :shipping_address
+- belongs_to :items_list
