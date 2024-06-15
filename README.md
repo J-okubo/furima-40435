@@ -21,7 +21,7 @@
 ## shipping_addressテーブル
 
 | Column                  | Type       | Options                        |
-| -----------------       | ---------- | ------------------------------ |
+| ----------------------- | ---------- | ------------------------------ |
 | post_code               | string     | null: false                    |
 | ship_from_location_id   | text       | null: false                    |
 | street_address          | string     | null: false                    |
