@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="ZVWW-h6zzkns1rkCT9i2" name="furima-40435 ER図">
-        <mxGraphModel dx="9036" dy="2067" grid="1" gridSize="6" guides="0" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" background="#000000" math="0" shadow="0">
+        <mxGraphModel dx="8271" dy="1706" grid="1" gridSize="6" guides="0" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" background="#000000" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" style="" parent="0"/>
@@ -73,7 +73,7 @@
                 <mxCell id="140" value="・item_list" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="122" vertex="1">
                     <mxGeometry y="76" width="252" height="24" as="geometry"/>
                 </mxCell>
-                <mxCell id="129" value="items_list table" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fontSize=16;" parent="1" vertex="1">
+                <mxCell id="129" value="items_lists table" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fontSize=16;" parent="1" vertex="1">
                     <mxGeometry x="-6540" y="-522" width="211" height="258" as="geometry"/>
                 </mxCell>
                 <mxCell id="130" value="・item_name" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="129" vertex="1">
@@ -132,7 +132,7 @@
                         <mxPoint x="-6432" y="-528" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="5CvpfBXaFP7AV2KvDt3U-161" value="items_purchase tabel" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fontSize=16;" vertex="1" parent="1">
+                <mxCell id="5CvpfBXaFP7AV2KvDt3U-161" value="items_purchases tabel" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fontSize=16;" vertex="1" parent="1">
                     <mxGeometry x="-6888" y="-642" width="252" height="74" as="geometry"/>
                 </mxCell>
                 <mxCell id="5CvpfBXaFP7AV2KvDt3U-163" value="・user" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="5CvpfBXaFP7AV2KvDt3U-161">

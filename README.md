@@ -16,9 +16,10 @@
 ### Association
 
 -has_many :item_comments
--has_many :items_purchase
+-has_many :items_purchases
+-has_many :items_lists
 
-## shipping_addressテーブル
+## shipping_addressesテーブル
 
 | Column                | Type       | Options                        |
 | ----------------------| ---------- | -------------------------------|
@@ -47,7 +48,7 @@
 -belongs_to :user
 -belongs_to :item_list
 
-## items_list テーブル
+## items_lists テーブル
 
 | Column                 | Type       | Options                        |
 | ---------------------- | ---------- | ------------------------------ |
@@ -65,9 +66,9 @@
 
 -belongs_to :user
 -has_many :item_comments
--has_many :items_purchase
+-has_one::items_purchase
 
-## items_purchase テーブル
+## items_purchases テーブル
 
 | Column      | Type       | Options                        |
 | ------------| ---------- | ------------------------------ |
@@ -78,4 +79,4 @@
 
 -belongs_to :user
 -has_one :shipping_address
--has_one :items_list
+-belongs_to :items_list
