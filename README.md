@@ -16,22 +16,23 @@
 ### Association
 
 -has_many :item_comments
--has_many :shipping_address
+-has_many :items_purchase
 
 ## shipping_addressテーブル
 
-| Column                  | Type       | Options                        |
-| ----------------------- | ---------- | ------------------------------ |
-| post_code               | string     | null: false                    |
-| ship_from_location_id   | text       | null: false                    |
-| street_address          | string     | null: false                    |
-| street_number           | string     | null: false                    |
-| building_name           | string     | null: false                    |
-| phone_number            | string     | null: false                    |
+| Column                | Type       | Options                        |
+| ----------------------| ---------- | -------------------------------|
+| post_code             | string     | null: false                    |
+| ship_from_location_id | integer    | null: false                    |
+| street_address        | string     | null: false                    |
+| street_number         | string     | null: false                    |
+| building_name         | string     |                                |
+| phone_number          | string     | null: false                    |
+| items_purchase        | references | null: false, foreign_key: true |
 
 ## Association
 -belongs_to :user
--has_many :item_list
+-has_one:item_list
 
 ## item_comments テーブル
 
@@ -64,15 +65,17 @@
 
 -belongs_to :user
 -has_many :item_comments
+-has_many :items_purchase
 
 ## items_purchase テーブル
 
-| Column           | Type       | Options                        |
-| ---------------- | ---------- | ------------------------------ |
-| user             | references | null: false, foreign_key: true |
-| shipping_address | references | null: false, foreign_key: true |
+| Column      | Type       | Options                        |
+| ------------| ---------- | ------------------------------ |
+| user        | references | null: false, foreign_key: true |
+| items_list  | references | null: false, foreign_key: true |
 
 ### Association
 
 -belongs_to :user
 -has_one :shipping_address
+-has_one :items_list

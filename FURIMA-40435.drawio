@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="ZVWW-h6zzkns1rkCT9i2" name="furima-40435 ER図">
-        <mxGraphModel dx="8960" dy="1914" grid="1" gridSize="6" guides="0" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" background="#000000" math="0" shadow="0">
+        <mxGraphModel dx="9036" dy="2067" grid="1" gridSize="6" guides="0" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" background="#000000" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" style="" parent="0"/>
@@ -11,7 +11,7 @@
                     </mxGeometry>
                 </mxCell>
                 <mxCell id="96" value="shipping_address table" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fontSize=16;" parent="1" vertex="1">
-                    <mxGeometry x="-6096" y="-942" width="198" height="154" as="geometry"/>
+                    <mxGeometry x="-6096" y="-942" width="198" height="180" as="geometry"/>
                 </mxCell>
                 <mxCell id="98" value="・post_code&#10;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="96" vertex="1">
                     <mxGeometry y="26" width="198" height="26" as="geometry"/>
@@ -27,6 +27,9 @@
                 </mxCell>
                 <mxCell id="117" value="・phone_number&#10;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="96" vertex="1">
                     <mxGeometry y="128" width="198" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="5CvpfBXaFP7AV2KvDt3U-170" value="・items_purchase" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="96">
+                    <mxGeometry y="154" width="198" height="26" as="geometry"/>
                 </mxCell>
                 <mxCell id="104" value="users table" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fontSize=16;" parent="1" vertex="1">
                     <mxGeometry x="-6528" y="-990" width="192" height="258" as="geometry"/>
@@ -135,7 +138,7 @@
                 <mxCell id="5CvpfBXaFP7AV2KvDt3U-163" value="・user" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="5CvpfBXaFP7AV2KvDt3U-161">
                     <mxGeometry y="26" width="252" height="24" as="geometry"/>
                 </mxCell>
-                <mxCell id="5CvpfBXaFP7AV2KvDt3U-164" value="・shipping_address" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="5CvpfBXaFP7AV2KvDt3U-161">
+                <mxCell id="5CvpfBXaFP7AV2KvDt3U-164" value="・items_list" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="5CvpfBXaFP7AV2KvDt3U-161">
                     <mxGeometry y="50" width="252" height="24" as="geometry"/>
                 </mxCell>
                 <mxCell id="5CvpfBXaFP7AV2KvDt3U-166" value="" style="fontSize=12;endArrow=ERzeroToMany;endFill=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;edgeStyle=orthogonalEdgeStyle;entryX=0.496;entryY=1.118;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="134" target="5CvpfBXaFP7AV2KvDt3U-164">
