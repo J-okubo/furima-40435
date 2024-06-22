@@ -128,8 +128,8 @@ RSpec.describe User, type: :model do
       end
 
       it 'passwordが全角文字を含むパスワードでは登録できない ' do
-        @user.password = '全角文字'
-        @user.password_confirmation = '全角文字'
+        @user.password = '全角文字12c'
+        @user.password_confirmation = '全角文字12c'
         @user.valid?
         expect(@user.errors.full_messages).to include("Password is too short (minimum is 6 characters)")
       end
