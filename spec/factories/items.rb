@@ -1,14 +1,17 @@
 FactoryBot.define do
   factory :item do
-    image                {"image"}
     name                 {"name"}
-    description          {"Description"}
-    genre_id             {"genre_id"}
-    condition_id         {"condition_id"}
-    delivery_charge_id   {"delivery_charge_id"}
-    prefecture_id        {"prefecture_id"}
-    transit_time_id      {"transit_time_id"}
-    price                {"price"}
+    description          {"description"}
+    genre_id             { 1 }
+    condition_id         { 1 }
+    delivery_charge_id   { 1 }
+    prefecture_id        { 1 }
+    transit_time_id      { 1 }
     price                {"99999"}
+    association :user
+
+    after(:build) do |item|
+      item.image.attach(io: File.open('public/images/test_image.png'), filename: 'test_image.png')
+    end
   end
 end

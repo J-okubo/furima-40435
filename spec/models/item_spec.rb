@@ -14,7 +14,7 @@ RSpec.describe Item, type: :model do
 
     context '商品情報入力できないとき' do
       it '画像が空白では登録できない' do
-        @item.image = ''
+        @item.image = nil
         @item.valid?
         expect(@item.errors.full_messages).to include("Image can't be blank")
       end
@@ -25,40 +25,40 @@ RSpec.describe Item, type: :model do
         expect(@item.errors.full_messages).to include("Name can't be blank")
       end
 
-      it 'Infoが空白では登録できない' do
+      it 'descriptionが空白では登録できない' do
         @item.description = ''
         @item.valid?
-        expect(@item.errors.full_messages).to include("Info can't be blank")
+        expect(@item.errors.full_messages).to include("Description can't be blank")
       end
 
-      it 'Categoryが空白では登録できない' do
+      it 'genre_idが空白では登録できない' do
         @item.genre_id = ''
         @item.valid?
-        expect(@item.errors.full_messages).to include("Category can't be blank")
+        expect(@item.errors.full_messages).to include("Genre is not a number")
       end
 
       it 'condition_idが空白では登録できない' do
         @item.condition_id = ''
         @item.valid?
-        expect(@item.errors.full_messages).to include("Sales status can't be blank")
+        expect(@item.errors.full_messages).to include("Condition is not a number")
       end
 
       it 'delivery_charge_idが空白では登録できない' do
         @item.delivery_charge_id = ''
         @item.valid?
-        expect(@item.errors.full_messages).to include("Scheduled delivery can't be blank")
+        expect(@item.errors.full_messages).to include("Delivery charge is not a number")
       end
 
       it 'prefecture_idが空白では登録できない' do
         @item.prefecture_id = ''
         @item.valid?
-        expect(@item.errors.full_messages).to include("Prefecture can't be blank")
+        expect(@item.errors.full_messages).to include("Prefecture is not a number")
       end
 
       it 'transit_time_idが空白では登録できない' do
         @item.transit_time_id = ''
         @item.valid?
-        expect(@item.errors.full_messages).to include("Shipping fee status can't be blank")
+        expect(@item.errors.full_messages).to include("Transit time is not a number")
       end
 
       it 'priceが空白では登録できない' do

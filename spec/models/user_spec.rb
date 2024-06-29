@@ -117,21 +117,21 @@ RSpec.describe User, type: :model do
         @user.password = 'abcdefg'
         @user.password_confirmation = 'abcdefg'
         @user.valid?
-        expect(@user.errors.full_messages).to include('Password is too short (minimum is 6 characters)')
+        expect(@user.errors.full_messages).to include("Password Input full-width characters")
       end
 
       it 'passwordが数字のみのパスワードでは登録できない' do
         @user.password = '123456'
         @user.password_confirmation = '123456'
         @user.valid?
-        expect(@user.errors.full_messages).to include("Password confirmation doesn't match Password")
+        expect(@user.errors.full_messages).to include("Password Input full-width characters")
       end
 
       it 'passwordが全角文字を含むパスワードでは登録できない ' do
         @user.password = '全角文字12c'
         @user.password_confirmation = '全角文字12c'
         @user.valid?
-        expect(@user.errors.full_messages).to include("Password is too short (minimum is 6 characters)")
+        expect(@user.errors.full_messages).to include("Password Input full-width characters")
       end
     end
   end
