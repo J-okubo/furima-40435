@@ -1,6 +1,11 @@
 class Item < ApplicationRecord
   extend ActiveHash::Associations::ActiveRecordExtensions
+
   belongs_to :genre
+  belongs_to :transittime
+  belongs_to :prefecture
+  belongs_to :deliverycharge
+  belongs_to :condition
   belongs_to :user
   has_one_attached :image
 
