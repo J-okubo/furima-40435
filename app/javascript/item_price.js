@@ -23,8 +23,8 @@ priceInput.addEventListener("input", () => {
        const addTaxDom = document.getElementById("add-tax-price");
        const profitDom = document.getElementById("profit");
 
-        addTaxDom.innerHTML = Math.round(fee);
-        profitDom.innerHTML = Math.round(profit);
+        addTaxDom.innerHTML = Math.floor(fee);
+        profitDom.innerHTML = Math.floor(profit);
 });
  
 // 販売手数料を計算する関数

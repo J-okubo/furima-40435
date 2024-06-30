@@ -2,7 +2,8 @@ require 'rails_helper'
 
 RSpec.describe Item, type: :model do
   before do
-    @item = FactoryBot.build(:item)
+    @user = FactoryBot.create(:user)
+    @item = FactoryBot.build(:item, user: @user)
   end
 
   describe '商品の情報入力' do
@@ -32,33 +33,33 @@ RSpec.describe Item, type: :model do
       end
 
       it 'genre_idが空白では登録できない' do
-        @item.genre_id = ''
+        @item.genre_id = '1'
         @item.valid?
-        expect(@item.errors.full_messages).to include("Genre is not a number")
+        expect(@item.errors.full_messages).to include("Genre must be other than 1")
       end
 
       it 'condition_idが空白では登録できない' do
-        @item.condition_id = ''
+        @item.condition_id = '1'
         @item.valid?
-        expect(@item.errors.full_messages).to include("Condition is not a number")
+        expect(@item.errors.full_messages).to include("Condition must be other than 1")
       end
 
       it 'delivery_charge_idが空白では登録できない' do
-        @item.delivery_charge_id = ''
+        @item.delivery_charge_id = '1'
         @item.valid?
-        expect(@item.errors.full_messages).to include("Delivery charge is not a number")
+        expect(@item.errors.full_messages).to include("Delivery charge must be other than 1")
       end
 
       it 'prefecture_idが空白では登録できない' do
-        @item.prefecture_id = ''
+        @item.prefecture_id = '1'
         @item.valid?
-        expect(@item.errors.full_messages).to include("Prefecture is not a number")
+        expect(@item.errors.full_messages).to include("Prefecture must be other than 1")
       end
 
       it 'transit_time_idが空白では登録できない' do
-        @item.transit_time_id = ''
+        @item.transit_time_id = '1'
         @item.valid?
-        expect(@item.errors.full_messages).to include("Transit time is not a number")
+        expect(@item.errors.full_messages).to include("Transit time must be other than 1")
       end
 
       it 'priceが空白では登録できない' do
@@ -71,6 +72,18 @@ RSpec.describe Item, type: :model do
         @item.price = '金額と１２３４'
         @item.valid?
         expect(@item.errors.full_messages).to include("Price is not a number")
+      end
+
+      it '価格が300円未満では出品できない' do
+        @item.price = '299'
+        @item.valid?
+        expect(@item.errors.full_messages).to include("Price must be greater than or equal to 300")
+      end
+
+      it '価格が9_999_999円を超えると出品できない' do
+        @item.price =  '10000000'
+        @item.valid?
+        expect(@item.errors.full_messages).to include("Price must be less than or equal to 9999999")
       end
     end
   end
