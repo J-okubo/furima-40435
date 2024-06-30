@@ -6,5 +6,5 @@ class Transittime < ActiveHash::Base
     { id: 4, name: '4~7で発送' },
   ]
   include ActiveHash::Associations
-  has_many :item
+  has_many :items
   end
