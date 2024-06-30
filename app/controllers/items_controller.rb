@@ -1,18 +1,21 @@
 class ItemsController < ApplicationController
+  before_action :authenticate_user!,only:[:new]
+  #before_action :contributor_confirmation, only: [:edit, :update, :destroy]
+
   def index
 
   end
 
   def new
-    @user = User.new
+    @item = Item.new
   end
 
   def create
-    @user = User.new(item_params)
-    if @user.save
+    @item = Item.new(item_params)
+    if @item.save
       redirect_to root_path
     else
-      render :new,status: :unprocessable_entit
+      render :new, status: :unprocessable_entity
     end
   end
 
@@ -20,10 +23,6 @@ class ItemsController < ApplicationController
 private
 
  def item_params
-  def prototype_params
-    params.require(:user).permit(:title, :catch_copy, :concept, :image).merge(user_id:current_user.id)
-  end
-
+    params.require(:item).permit(:name, :description, :image, :genre_id, :condition_id, :delivery_charge_id, :prefecture_id, :transit_time_id, :price ).merge(user_id:current_user.id)
  end
-
 end

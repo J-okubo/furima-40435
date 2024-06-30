@@ -49,19 +49,19 @@
 - belongs_to :user
 - belongs_to :item_list
 
-## items_lists テーブル
+## items テーブル
 
-| Column                 | Type       | Options                        |
-| ---------------------- | ---------- | ------------------------------ |
-| item_name              | string     | null: false                    |
-| item_description       | text       | null: false                    |
-| item_genre_id          | integer    | null: false                    |
-| item_condition_id      | integer    | null: false                    |
-| delivery_charge_id     | integer    | null: false                    |
-| ship_from_location_id  | integer    | null: false                    |
-| transit_time_id        | integer    | null: false                    |
-| item_price             | integer    | null: false                    |
-| user                   | references | null: false, foreign_key: true |
+| Column             | Type       | Options                        |
+| -------------------| ---------- | ------------------------------ |
+| name               | string     | null: false                    |
+| description        | text       | null: false                    |
+| genre_id           | integer    | null: false                    |
+| condition_id       | integer    | null: false                    |
+| delivery_charge_id | integer    | null: false                    |
+| prefecture_id      | integer    | null: false                    |
+| transit_time_id    | integer    | null: false                    |
+| price              | integer    | null: false                    |
+| user               | references | null: false, foreign_key: true |
 
 ### Association
 

@@ -9,4 +9,5 @@ class User < ApplicationRecord
   validates :first_name_han, presence: true, format: { with: /\A[ァ-ヶー－]+\z/, message: "Input full-width katakana characters" }
   validates :last_name_han, presence: true, format: { with: /\A[ァ-ヶー－]+\z/, message: "Input full-width katakana characters" }
   validates :date_of_birth, presence: true
+  has_many :items
 end
