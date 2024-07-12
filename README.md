@@ -16,25 +16,25 @@
 ### Association
 
 - has_many :item_comments
-- has_many :items_purchases
-- has_many :items_lists
+- has_many :orders
+- has_many :items
 
 ## shipping_addressesテーブル
 
-| Column                | Type       | Options                        |
-| ----------------------| ---------- | -------------------------------|
-| post_code             | string     | null: false                    |
-| ship_from_location_id | integer    | null: false                    |
-| street_address        | string     | null: false                    |
-| street_number         | string     | null: false                    |
-| building_name         | string     |                                |
-| phone_number          | string     | null: false                    |
-| items_purchase        | references | null: false, foreign_key: true |
+| Column         | Type       | Options                        |
+| ---------------| ---------- | -------------------------------|
+| post_code      | string     | null: false                    |
+| prefecture_id  | integer    | null: false                    |
+| street_address | string     | null: false                    |
+| street_number  | string     | null: false                    |
+| building_name  | string     |                                |
+| phone_number   | string     | null: false                    |
+| order          | references | null: false, foreign_key: true |
 
 ## Association
 
 - belongs_to :user
-- has_one:item_list
+- has_one:item
 
 ## item_comments テーブル
 
@@ -42,12 +42,12 @@
 | ------------ | ---------- | ------------------------------ |
 | content      | text       | null: false                    |
 | user         | references | null: false, foreign_key: true |
-| item_list    | references | null: false, foreign_key: true |
+| item         | references | null: false, foreign_key: true |
 
 ### Association
 
 - belongs_to :user
-- belongs_to :item_list
+- belongs_to :item
 
 ## items テーブル
 
@@ -67,17 +67,17 @@
 
 - belongs_to :user
 - has_many :item_comments
-- has_one:items_purchase
+- has_one:order
 
-## items_purchases テーブル
+## orders テーブル
 
 | Column      | Type       | Options                        |
 | ------------| ---------- | ------------------------------ |
 | user        | references | null: false, foreign_key: true |
-| items_list  | references | null: false, foreign_key: true |
+| item       | references | null: false, foreign_key: true |
 
 ### Association
 
 - belongs_to :user
 - has_one :shipping_address
-- belongs_to :items_list
+- belongs_to :item
