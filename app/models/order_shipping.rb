@@ -1,6 +1,6 @@
 class OrderShipping
   include ActiveModel::Model
-  attr_accessor :token, :item_id, :user_id, :post_code, :prefecture_id, :street_address, :street_number, :building_name, :phone_number
+   attr_accessor :token, :item_id, :user_id, :post_code, :prefecture_id, :street_address, :street_number, :building_name, :phone_number
 
   def item_price
     Item.find(item_id).price
